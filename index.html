@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDE operation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="container">
+        <div class="form_container">
+            <form class="create_form">
+                <input type="text"  class="name" name="name" placeholder="enter name"/>
+                <br>
+                <input type="text" class="role" name="role" placeholder="enter Role">
+                <br>
+                <label>Status</label>
+        <select class="status" required>
+            <option value="Active" name="s">Active</option>
+            <option value="On Leave" name="s">On Leave</option>
+            <option value="Terminated" name="s">Terminated</option>
+        </select><br><br>
+                <button type="button" onclick="addData()"> Add Employee</button>
+
+            </form>
+
+
+            
+            <table id="outputTable">
+                <thead>
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>State</th>
+                    <th>Action</th>
+                    
+                </thead>
+                <tbody class="table_data">
+                    
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="main.js">
+    </script>
+</body>
+</html>

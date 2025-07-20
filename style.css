@@ -8,9 +8,9 @@
     margin-top: 20px;
     width: 40vw;
     border-radius: 10px;
-    height: 80vh;
+    height:auto;
     padding: 10px;
-    background-color: rgb(103, 105, 47);
+    background-color: rgb(230, 227, 186);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -55,9 +55,10 @@ table{
             text-align: left;
         }
  th {
-            background-color: #eff253;
+            background-color: #939489;
             color: #0b0b0b;
         }
+
 .update_form{
     display: none;
 }

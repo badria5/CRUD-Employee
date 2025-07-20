@@ -1,4 +1,4 @@
-
+let deleteElements = [];
 let nameError=document.getElementById("nameerror");
 function addData(){
 
@@ -52,14 +52,55 @@ function editData(button) {
 }
 
 function deleteData(button) {
+        let row = button.parentNode.parentNode;
+    let rowData = {
+        name: row.cells[0].innerHTML,
+        role: row.cells[1].innerHTML,
+        state: row.cells[2].innerHTML
+    };
+    
+    deleteElements.push(rowData); 
 
-            
-            let row = button.parentNode.parentNode;
+       let table2 = document.getElementById("trashTable");
+    let deleteRow = table2.insertRow(table2.rows.length);
+    deleteRow.insertCell(0).innerHTML = rowData.name;
+    deleteRow.insertCell(1).innerHTML = rowData.role;
+    deleteRow.insertCell(2).innerHTML = rowData.state;
+ deleteRow.insertCell(3).innerHTML =
+        '<button onclick="restorFromTrash(this)">Restore</button>';
+        row.parentNode.removeChild(row);
 
-            
-            row.parentNode.removeChild(row);
         }
-
+function restorFromTrash(button) {
+    let row = button.parentNode.parentNode;
+    let name = row.cells[0].innerHTML;
+    let role = row.cells[1].innerHTML;
+    let state = row.cells[2].innerHTML;
+    let table = document.getElementById("outputTable");
+    let newRow = table.insertRow(table.rows.length);
+    newRow.insertCell(0).innerHTML = name;
+    newRow.insertCell(1).innerHTML = role;
+    newRow.insertCell(2).innerHTML = state;
+    newRow.insertCell(3).innerHTML =
+        '<button onclick="editData(this)">Edit</button>' +
+        '<button onclick="deleteData(this)">Delete</button>';
+           row.parentNode.removeChild(row);
+           trashClose();
+}
+function trash(){
+   let trash= document.getElementById("trashTable");
+   if(trash.style.display=="none")
+    {
+   trash.style.display="block";}
+   
+}
+function trashClose()
+{
+ let trashclose= document.getElementById("trashTable");
+if(trashclose.style.display=="block")
+    {
+   trashclose.style.display="none";}
+}
 function clearInputs() {
 
             // Clear input fields

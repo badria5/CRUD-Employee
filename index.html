@@ -22,8 +22,6 @@
                 <button type="button" onclick="addData()"> Add Employee</button>
 
             </form>
-
-
             
             <table id="outputTable">
                 <thead>
@@ -37,6 +35,21 @@
                     
                 </tbody>
             </table>
+<button type="button"  id="btnTrash" onclick="trash()">Open Trash</button>
+        <table id="trashTable"  style="display:none">
+                <thead>
+
+                    <th>Name</th>
+                    <th>Role</th>
+                    <th>State</th>
+                    <th>Action</th>
+                    
+                </thead>
+                <tbody class="table_trash">
+                    
+                </tbody>
+            </table>
+            
         </div>
 
     </div>

@@ -50,9 +50,10 @@ table{
 }
  th,
         td {
-            border: 1px solid #ddd;
+            border: 1px solid #9c9797;
             padding: 8px;
             text-align: left;
+            background-color: #999c94;;
         }
  th {
             background-color: #939489;

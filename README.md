@@ -10,5 +10,6 @@ If we press the delete button, the data is transferred to the trash, as in the f
 ![image alt](https://github.com/badria5/CRUD-Employee/blob/53a13a6aeb15dff7da53df5bddb830953682f0fb/screen4.png)
 If we open the trash, we find the row that was deleted in it
 ![image alt](https://github.com/badria5/CRUD-Employee/blob/6500d4917f819663f6f45d0b7e0c3d81f5a23885/screen5.png)
-
+If we want to restore the deleted row, we click on Restore from Recycle Bin, as in the following image, and it returns the row to the data table.
+![image alt](https://github.com/badria5/CRUD-Employee/blob/af7c3fdeadd862e58473810c514f6c97823d16b3/screen7.png)
 
